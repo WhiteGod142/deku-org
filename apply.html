@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deku Organization - Apply as Student</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#application-form" class="skip-link">Skip to application form</a>
+
+  <!-- Navigation -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Deku Organization homepage">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12"/>
+        </svg>
+        <span class="visually-hidden">Deku Organization</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="apply.html" style="color: var(--color-accent)">Apply</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="application-form">
+    <div class="container">
+      <h1 class="page-title color-primary">Apply as a Student</h1>
+
+      <p class="page-subtitle color-light-text">
+        Join Deku Organization and gain access to tools, resources, and a community of students building the future of open source.
+      </p>
+
+      <form id="student-application" novalidate>
+
+        <!-- Student Information Section -->
+        <div class="section">
+          <h2 class="section-subtitle color-primary">Student Information</h2>
+
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+            <span class="form-requirement">Required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <span class="form-requirement">We'll send updates to this address</span>
+          </div>
+
+          <div class="form-group">
+            <label for="school">School / University</label>
+            <input type="text" id="school" name="school" required>
+            <span class="form-requirement">e.g., University of California, High School name</span>
+          </div>
+
+          <div class="form-group">
+            <label for="grade-level">Grade Level / Year</label>
+            <select id="grade-level" name="grade-level">
+              <option value="" disabled selected>Select your level...</option>
+              <option value="high-school">High School</option>
+              <option value="freshman">College Freshman</option>
+              <option value="sophomore">College Sophomore</option>
+              <option value="junior">College Junior</option>
+              <option value="senior">College Senior</option>
+              <option value="graduate">Graduate Student</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="major">Major / Field of Study</label>
+            <input type="text" id="major" name="major">
+            <span class="form-hint">Optional - helps us tailor resources</span>
+          </div>
+        </div>
+
+        <!-- Why Apply? -->
+        <div class="section">
+          <h2 class="section-subtitle color-primary">Why Deku Organization?</h2>
+
+          <p class="body-text">
+            What interests you most about our student innovation and open source programs?
+          </p>
+
+          <textarea id="motivation" name="motivation" rows="4" class="form-textarea" required>
+</textarea>
+          <small class="form-hint">
+            Tell us about your goals, a project you're working on, or what you hope to learn.
+          </small>
+        </div>
+
+        <!-- Tools & Resources Interested In -->
+        <div class="section">
+          <h2 class="section-subtitle color-primary">Tools & Resources Interested In</h2>
+
+          <p class="body-text">
+            Check all that apply:
+          </p>
+
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="tools" value="prisma" class="checkbox-input">
+              <span>Prisma ORM & Database Tools</span></label>
+            <label><input type="checkbox" name="tools" value="frontend" class="checkbox-input">
+              <span>Frontend Development Tools</span></label>
+            <label><input type="checkbox" name="tools" value="design" class="checkbox-input">
+              <span>Design Resources & Figma Kits</span></label>
+            <label><input type="checkbox" name="tools" value="api" class="checkbox-input">
+              <span>API & Integration Tools</span></label>
+            <label><input type="checkbox" name="tools" value="deployment" class="checkbox-input">
+              <span>Deployment & Hosting Tools</span></label>
+            <label><input type="checkbox" name="tools" value="other" class="checkbox-input">
+              <span>Other (specify below)</span></label>
+          </div>
+
+          <div class="form-group" id="other-spec" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-neutral);">
+            <label for="other-tools">Specify other tools:</label>
+            <input type="text" id="other-tools" name="other-tools" placeholder="e.g., Django, TensorFlow, etc.">
+          </div>
+        </div>
+
+        <!-- Innovation Project (Optional) -->
+        <div class="section">
+          <h2 class="section-subtitle color-primary">Innovation Project (Optional)</h2>
+
+          <p class="body-text">
+            Tell us about a student project you're working on or an idea you want to pursue.
+          </p>
+
+          <textarea id="project" name="project" rows="3" class="form-textarea"
+            placeholder="e.g., Building a Todo app with Prisma, redesigning my school's website, contributing to an open source project">
+          </textarea>
+        </div>
+
+        <!-- Agreement -->
+        <div class="section">
+          <h2 class="section-subtitle color-primary">Agreement</h2>
+
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="agreement" required>
+              I am a current student and the information provided is accurate.
+            </label>
+          </div>
+
+          <p class="small-text">
+            By submitting, you agree to receive communications from Deku Organization regarding
+            student programs, tools access, and innovation opportunities.
+          </p>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="section" style="text-align: center;">
+          <button type="submit" class="btn btn-primary">
+            Submit Application
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-container">
+      <a href="index.html" class="footer-logo" aria-label="Deku Organization">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12"/>
+        </svg>
+      </a>
+      <p class="footer-desc">Student Innovation & Open Source Organization</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="apply.html">Apply</a></li>
+      </ul>
+      <p class="footer-copyright">© 2026 Deku Organization. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Form validation
+    const form = document.getElementById('student-application');
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        let valid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            valid = false;
+            field.style.borderColor = '#e53e3e';
+          } else {
+            field.style.borderColor = '';
+          }
+        });
+
+        // Check agreement checkbox
+        const agreement = form.querySelector('input[name="agreement"]');
+        if (agreement && !agreement.checked) {
+          valid = false;
+        }
+
+        if (!valid) {
+          e.preventDefault();
+          alert('Please fill in all required fields and agree to the terms.');
+        }
+      });
+
+      // Toggle other-spec field
+      const otherTools = form.querySelector('input[value="other"]');
+      const otherSpec = document.getElementById('other-spec');
+
+      if (otherTools && otherSpec) {
+        otherTools.addEventListener('change', function() {
+          otherSpec.style.display = this.checked ? 'block' : 'none';
+        });
+
+        // Initial check
+        otherSpec.style.display = otherTools.checked ? 'block' : 'none';
+      }
+    }
+
+    // Skip link focus management
+    const skipLink = document.querySelector('.skip-link');
+    const mainContent = document.querySelector('main');
+
+    if (skipLink && mainContent) {
+      skipLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        mainContent.focus();
+      });
+    }
+  </script>
+
+</body>
+</html>
